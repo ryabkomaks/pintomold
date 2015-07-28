@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+	var random = Math.floor(Math.random() * (9999 - 1 + 1)) + 1;
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
 		, sass_directory_import: {
@@ -32,20 +34,18 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed'
 				}
-				, files: [{
-					expand: true,
-					cwd: 'src/sass/',
-					src: ['*.scss'],
-					dest: 'css/',
-					ext: '.css'
-				}]
+				, files: {                         
+					'css/main.css': 'src/sass/main.scss'
+				}
 			}
 		}
 		, sprite:{
 			all: {
 				src: 'src/sprite/*.png',
-				dest: 'images/sprite.png',
-				destCss: 'src/sass/_sprite.scss'
+				dest: 'img/sprite.png',
+				destCss: 'src/sass/_sprite.scss',
+				imgPath: 'img/sprite.png?random=' + random,
+				algorithm: 'binary-tree'
 			}
 	    }
 	    , imagemin: {
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 	                expand: true,
 	                cwd: 'src/images/',
 	                src: ['**/*.{png,jpg,gif}'],
-	                dest: 'images/'
+	                dest: 'img/'
 	            }]
 	        }
 	    }
@@ -75,9 +75,17 @@ module.exports = function(grunt) {
 			}
 		}
 		, watch: {
-			sass_directory_import: {
-				files: ['src/sass/base/*.scss', 'src/sass/layout/*.scss', 'src/sass/modules/*.scss'],
-				tasks: ['sass_directory_import']
+			sass_directory_base_import: {
+				files: ['src/sass/base/*.scss', '!src/sass/base/_all_base_import.scss'],
+				tasks: ['sass_directory_import:base', 'sass']
+			}
+			, sass_directory_layout_import: {
+				files: ['src/sass/layout/*.scss', '!src/sass/layout/_all_layout_import.scss'],
+				tasks: ['sass_directory_import:layout']
+			}
+			, sass_directory_modules_import: {
+				files: ['src/sass/modules/*.scss', '!src/sass/modules/_all_modules_import.scss'],
+				tasks: ['sass_directory_import:modules']
 			}
 			, css: {
 				files: 'src/sass/*.scss',
