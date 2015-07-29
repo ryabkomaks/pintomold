@@ -41,20 +41,20 @@ module.exports = function(grunt) {
 		}
 		, sprite:{
 			all: {
-				src: 'src/sprite/*.png',
-				dest: 'img/sprite.png',
-				destCss: 'src/sass/_sprite.scss',
-				imgPath: 'img/sprite.png?random=' + random,
-				algorithm: 'binary-tree'
+				src: 'src/sprite/*.png'
+				, dest: 'img/sprite.png'
+				, destCss: 'src/sass/_sprite.scss'
+				, imgPath: 'img/sprite.png?random=' + random
+				, algorithm: 'binary-tree'
 			}
 	    }
 	    , imagemin: {
 	        dynamic: {
 	            files: [{
-	                expand: true,
-	                cwd: 'src/images/',
-	                src: ['**/*.{png,jpg,gif}'],
-	                dest: 'img/'
+	                expand: true
+	                , cwd: 'src/images/'
+	                , src: ['**/*.{png,jpg,gif}']
+	                , dest: 'img/'
 	            }]
 	        }
 	    }
@@ -70,38 +70,38 @@ module.exports = function(grunt) {
 				browsers: ['ie 8', 'ie 9' , 'last 2 Chrome versions', 'last 2 Firefox versions']
 			}
 			, target: {
-				src: ['css/main.css'],
-			    dest: 'css/styles.css'
+				src: ['css/main.css']
+				, dest: 'css/styles.css'
 			}
 		}
 		, watch: {
 			sass_directory_base_import: {
-				files: ['src/sass/base/*.scss', '!src/sass/base/_all_base_import.scss'],
-				tasks: ['sass_directory_import:base', 'sass']
+				files: ['src/sass/base/*.scss', '!src/sass/base/_all_base_import.scss']
+				, tasks: ['sass_directory_import:base', 'sass']
 			}
 			, sass_directory_layout_import: {
-				files: ['src/sass/layout/*.scss', '!src/sass/layout/_all_layout_import.scss'],
-				tasks: ['sass_directory_import:layout']
+				files: ['src/sass/layout/*.scss', '!src/sass/layout/_all_layout_import.scss']
+				, tasks: ['sass_directory_import:layout', 'sass']
 			}
 			, sass_directory_modules_import: {
-				files: ['src/sass/modules/*.scss', '!src/sass/modules/_all_modules_import.scss'],
-				tasks: ['sass_directory_import:modules']
+				files: ['src/sass/modules/*.scss', '!src/sass/modules/_all_modules_import.scss']
+				, tasks: ['sass_directory_import:modules', 'sass']
 			}
 			, css: {
-				files: 'src/sass/*.scss',
-				tasks: ['sass']
+				files: 'src/sass/*.scss'
+				, tasks: ['sass']
 			}
 			, jsmin: {
-				files: 'src/js/*.js',
-				tasks: ['newer:uglify']
+				files: 'src/js/*.js'
+				, tasks: ['newer:uglify']
 			}
 			, sprite: {
-				files: 'src/sprite/*.png',
-				tasks: ['sprite']
+				files: 'src/sprite/*.png'
+				, tasks: ['sprite']
 			}
 			, imagemin: {
-				files: 'src/images/**/*.{png,jpg,gif}',
-				tasks: ['newer:imagemin']
+				files: 'src/images/**/*.{png,jpg,gif}'
+				, tasks: ['newer:imagemin']
 			}
 		}
 		
@@ -115,7 +115,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	
 		
 	grunt.registerTask('default',[
 		'sass_directory_import'
