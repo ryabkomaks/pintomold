@@ -104,7 +104,6 @@ module.exports = function(grunt) {
 				, tasks: ['newer:imagemin']
 			}
 		}
-		
 	});
 
 	grunt.loadNpmTasks('grunt-newer');
