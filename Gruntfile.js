@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 			}
 			, target: {
 				src: ['css/main.css']
-				, dest: 'css/styles.css'
+				, dest: 'css/styles.min.css'
 			}
 		}
 		, watch: {

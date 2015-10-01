@@ -1,3 +1,11 @@
-@import "base/all_base_import";
-@import "layout/all_layout_import";
-@import "modules/all_modules_import";
+@charset "UTF-8";
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "core";
+
+/**
+ * It’s all yours, cap’n... Begin importing your stuff here.
+ */
