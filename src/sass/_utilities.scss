@@ -1,0 +1,14 @@
+// Map Color
+@function get-color($key: 'primary') {
+	@return map-get($colors, $key);
+}
+
+// Font Scaling
+@function type-scale($level) {
+	@return map-get($type-scale, $level);
+}
+
+// Vertical Rhythm
+@function line-height($level) {
+	@return map-get($line-height, $level);
+}

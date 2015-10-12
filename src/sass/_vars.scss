@@ -1,0 +1,48 @@
+// Colors
+$darkGrey		: #313131;
+$lightGrey		: #dedede;
+$orange			: #f8c268;
+
+// Base Colors
+$colors: (
+	'primary'	: $darkGrey,
+	'secondary'	: $lightGrey,
+	'accent'	: $orange
+);
+
+
+// Font Stacks
+$font-family-lato				: 'Lato', sans-serif;
+$font-family-old-standart		: 'Old Standard TT', sans-serif;
+
+
+// Base Font Sizes
+$base-font-size		  : 1rem;
+$base-line-height	  : $base-font-size * 1.5;
+
+// Font Weights
+$font-weight-light    : 300;
+$font-weight-normal   : 400;
+$font-weight-semibold : 700;
+$font-weight-bold     : 900;
+
+// Base Font Scaling
+$type-scale: (
+	-1	: 0.75rem,  	// small text
+	0	: 1rem,      	// body text
+	1	: 1.333rem,  	// large text
+	2	: 1.777rem   	// main heading
+);
+
+// Base Line height
+$line-heights: (
+	-1	: $base-line-height,
+	0	: $base-line-height,
+	1	: $base-line-height * 2,
+	2	: $base-line-height * 2
+);
+
+
+// Breakpoints
+
+// Grid System

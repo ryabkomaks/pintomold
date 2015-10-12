@@ -28,6 +28,14 @@ module.exports = function(grunt) {
 					src: ['src/sass/modules/**/_all_modules_import.scss']
 				}
 			}
+			, components: {
+				options: {
+					quiet: true
+				}
+				, files: {
+					src: ['src/sass/components/**/_all_components_import.scss']
+				}
+			}
 		}
 		, sass: {
 			dist: {
@@ -67,7 +75,7 @@ module.exports = function(grunt) {
 		}
 		, autoprefixer: {
 			options: {
-				browsers: ['ie 8', 'ie 9' , 'last 2 Chrome versions', 'last 2 Firefox versions']
+				browsers: ['ie 9' , 'last 2 Chrome versions', 'last 2 Firefox versions']
 			}
 			, target: {
 				src: ['css/main.css']
@@ -86,6 +94,10 @@ module.exports = function(grunt) {
 			, sass_directory_modules_import: {
 				files: ['src/sass/modules/*.scss', '!src/sass/modules/_all_modules_import.scss']
 				, tasks: ['sass_directory_import:modules', 'sass']
+			}
+			, sass_directory_components_import: {
+				files: ['src/sass/components/*.scss', '!src/sass/components/_all_components_import.scss']
+				, tasks: ['sass_directory_import:components', 'sass']
 			}
 			, css: {
 				files: 'src/sass/*.scss'

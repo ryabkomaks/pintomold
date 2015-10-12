@@ -1,6 +1,9 @@
 /**
  * Main stylesheet
  */
+@import "utilities";
+@import "mixins";
+@import "sprite";
 
 // Sass modeles
 @import "base/all_base_import";
