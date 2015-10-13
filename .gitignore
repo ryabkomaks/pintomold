@@ -1,6 +1,13 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-node_modules
+css/
+js/*js
+img/
+
 .sass-cache
+node_modules
+
 readme.txt
+
+# Temporary local .psd files
 tmp
