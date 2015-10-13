@@ -12,3 +12,8 @@
 @function line-height($level) {
 	@return map-get($line-height, $level);
 }
+
+// Get brakepoint
+@function get-brakepoint() {
+	@return map-get($breakpoints, $breakpoint);	
+}

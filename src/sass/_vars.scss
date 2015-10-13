@@ -1,3 +1,4 @@
+//
 // Colors
 $darkGrey		: #313131;
 $lightGrey		: #dedede;
@@ -11,10 +12,10 @@ $colors: (
 );
 
 
+//
 // Font Stacks
 $font-family-lato				: 'Lato', sans-serif;
 $font-family-old-standart		: 'Old Standard TT', sans-serif;
-
 
 // Base Font Sizes
 $base-font-size		  : 1rem;
@@ -43,6 +44,30 @@ $line-height: (
 );
 
 
+//
 // Breakpoints
+$begin-tablet           : 321px;
+$begin-tablet-portrait  : 768px;
+$begin-desktop          : 1024px;
+$begin-big-desktop      : 1240px;
 
+$bp-mobile				: ( max-width:  ($begin-tablet - 1) );
+$bp-tablet				: ( min-width: $begin-tablet ) and ( max-width: ($begin-desktop - 1) );
+$bp-desktop				: ( min-width: $begin-desktop );
+
+$breakpoints: (
+	'bp-mobile'			: $bp-mobile,
+	'bp-tablet'			: $bp-tablet,
+	'bp-desktop'		: $bp-desktop
+);
+
+
+//
 // Grid System
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+);
