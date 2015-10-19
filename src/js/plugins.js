@@ -80,11 +80,11 @@ pintomold.utils = {
     }
 
     , loadFonts: function(){
-
         "use strict";
+        
         // once cached, the css file is stored on the client forever unless
         // the URL below is changed. Any change will invalidate the cache
-        var css_href = './index_files/web-fonts.css';
+        var css_href = './css/typography.css';
         
         // a simple event handler wrapper
         function on(el, ev, callback) {
@@ -144,6 +144,7 @@ pintomold.utils = {
         }
         // this is the simple utitily that injects the cached or loaded css text
         function injectRawStyle(text) {
+            console.log('injectRawStyle');
             var style = document.createElement('style');
             // cater for IE8 which doesn't support style.innerHTML
             style.setAttribute("type", "text/css");

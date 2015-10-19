@@ -44,6 +44,7 @@ module.exports = function(grunt) {
 				}
 				, files: {                         
 					'css/main.css': 'src/sass/main.scss'
+					, 'css/typography.css': 'src/sass/typography.scss' //generate fonts stylesheet to optimize loading
 				}
 			}
 		}
@@ -69,7 +70,7 @@ module.exports = function(grunt) {
 		, uglify: {
 			js: {
 				files: {
-					'js/main.min.js': ['src/js/*.js']
+					'js/main.min.js': ['src/js/plugins.js', 'src/js/main.js']
 				}
 			}
 		}

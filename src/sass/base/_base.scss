@@ -2,11 +2,18 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
-    @include type-setting(0);
-    color: get-color('primary');
+// html {
+//     @include type-setting(0);
+//     color: get-color('primary');
+// }
+
+h1, h2, h3, h4, h5{
+    font-family: $ff-OldStandardTT-Bold;
 }
 
+// h1{
+//     font-size: type-scale(2);
+// }
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301

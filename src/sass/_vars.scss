@@ -5,17 +5,20 @@ $lightGrey		: #dedede;
 $orange			: #f8c268;
 
 // Base Colors
-$colors: (
-	'primary'	: $darkGrey,
-	'secondary'	: $lightGrey,
-	'accent'	: $orange
-);
+// $colors: (
+// 	'primary'	: $darkGrey,
+// 	'secondary'	: $lightGrey,
+// 	'accent'	: $orange
+// );
 
 
 //
 // Font Stacks
-$font-family-lato				: 'Lato', sans-serif;
-$font-family-old-standart		: 'Old Standard TT', sans-serif;
+$ff-Lato-Regular			: 'Lato Regular', sans-serif;
+$ff-Lato-Bold				: 'Lato Bold', sans-serif;
+
+$ff-OldStandardTT-Italic	: 'Old Standard TT Italic', sans-serif;
+$ff-OldStandardTT-Bold		: 'Old Standard TT Bold', sans-serif;
 
 // Base Font Sizes
 $base-font-size		  : 1rem;
@@ -28,20 +31,20 @@ $font-weight-semibold : 700;
 $font-weight-bold     : 900;
 
 // Base Font Scaling
-$type-scale: (
-	-1	: 0.75rem,  	// small text
-	0	: 1rem,      	// body text
-	1	: 1.333rem,  	// large text
-	2	: 1.777rem   	// main heading
-);
+// $type-scale: (
+// 	-1	: 0.75rem,  	// small text
+// 	0	: 1rem,      	// body text
+// 	1	: 1.333rem,  	// large text
+// 	2	: 1.777rem   	// main heading
+// );
 
 // Base Line height
-$line-height: (
-	-1	: $base-line-height,
-	0	: $base-line-height,
-	1	: $base-line-height * 2,
-	2	: $base-line-height * 2
-);
+// $line-height: (
+// 	-1	: $base-line-height,
+// 	0	: $base-line-height,
+// 	1	: $base-line-height * 2,
+// 	2	: $base-line-height * 2
+// );
 
 
 //
@@ -51,23 +54,23 @@ $begin-tablet-portrait  : 768px;
 $begin-desktop          : 1024px;
 $begin-big-desktop      : 1240px;
 
-$bp-mobile				: ( max-width:  ($begin-tablet - 1) );
-$bp-tablet				: ( min-width: $begin-tablet ) and ( max-width: ($begin-desktop - 1) );
-$bp-desktop				: ( min-width: $begin-desktop );
+// $bp-mobile				: ( max-width:  ($begin-tablet - 1) );
+// $bp-tablet				: ( min-width: $begin-tablet ) and ( max-width: ($begin-desktop - 1) );
+// $bp-desktop				: ( min-width: $begin-desktop );
 
-$breakpoints: (
-	'bp-mobile'			: $bp-mobile,
-	'bp-tablet'			: $bp-tablet,
-	'bp-desktop'		: $bp-desktop
-);
+// $breakpoints: (
+// 	'bp-mobile'			: $bp-mobile,
+// 	'bp-tablet'			: $bp-tablet,
+// 	'bp-desktop'		: $bp-desktop
+// );
 
 
 //
 // Grid System
-$susy: (
-	columns: 12,
-	gutters: 1/4,
-	math: fluid,
-	output: float,
-	gutter-position: inside,
-);
+// $susy: (
+// 	columns: 12,
+// 	gutters: 1/4,
+// 	math: fluid,
+// 	output: float,
+// 	gutter-position: inside,
+// );
