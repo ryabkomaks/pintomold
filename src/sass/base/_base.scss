@@ -4,7 +4,35 @@
 
 html {
     @include type-setting(0);
+
+    font-family: $ff-Lato;
+    font-weight: $font-weight-normal;
     color: get-color('primary');
+}
+
+body{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: $ff-OldStandardTT;
+    font-weight: $font-weight-bold;
+
+    // tmp
+    margin: 0;
+}
+
+h1{
+    @include type-setting(2);
+}
+h2{
+    @include type-setting(1);
+}
+h3{
+    @include type-setting(0);
+}
+h4{
+    @include type-setting(1);
 }
 
 /*

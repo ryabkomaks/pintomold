@@ -85,19 +85,19 @@ module.exports = function(grunt) {
 		, watch: {
 			sass_directory_base_import: {
 				files: ['src/sass/base/*.scss', '!src/sass/base/_all_base_import.scss']
-				, tasks: ['sass_directory_import:base', 'sass']
+				, tasks: ['sass_directory_import:base', 'sass', 'autoprefixer']
 			}
 			, sass_directory_layout_import: {
 				files: ['src/sass/layout/*.scss', '!src/sass/layout/_all_layout_import.scss']
-				, tasks: ['sass_directory_import:layout', 'sass']
+				, tasks: ['sass_directory_import:layout', 'sass', 'autoprefixer']
 			}
 			, sass_directory_modules_import: {
 				files: ['src/sass/modules/*.scss', '!src/sass/modules/_all_modules_import.scss']
-				, tasks: ['sass_directory_import:modules', 'sass']
+				, tasks: ['sass_directory_import:modules', 'sass', 'autoprefixer']
 			}
 			, sass_directory_components_import: {
 				files: ['src/sass/components/*.scss', '!src/sass/components/_all_components_import.scss']
-				, tasks: ['sass_directory_import:components', 'sass']
+				, tasks: ['sass_directory_import:components', 'sass', 'autoprefixer']
 			}
 			, css: {
 				files: 'src/sass/*.scss'
