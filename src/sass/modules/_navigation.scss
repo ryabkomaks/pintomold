@@ -49,7 +49,7 @@
 		text-decoration: none;
 		color: get-color('primary');
 
-		&:hover{
+		&--active, &:hover{
 			color: get-color('accent');
 		}
 
