@@ -46,8 +46,9 @@ $line-height: (
 	2	: $base-line-height * 2
 );
 
+//Max container size
+$pagew-max-width: 70rem;
 
-//
 // Breakpoints
 $begin-tablet           : 321px;
 $begin-tablet-portrait  : 768px;

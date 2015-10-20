@@ -1,12 +1,12 @@
 .navigation{
-	$header-top-margin: 30px;
+	$navigation-top-margin: 30px;
 	$navigation-duble-border-space: 5px;
 
-	@include container(70rem);
+	@include container($pagew-max-width);
 	
 	position: relative;
 
-	margin-top: $header-top-margin + $navigation-duble-border-space;
+	margin-top: $navigation-top-margin + $navigation-duble-border-space;
 	margin-bottom: $navigation-duble-border-space;
 
 	border: 1px solid get-color('secondary');

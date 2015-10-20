@@ -1,0 +1,50 @@
+.title-bar{
+	$title-bar-height--6by1: 100%/6;
+	$title-bar-height--3by1: 100%/3;
+	$title-bar-height--2by1: 100%/2;
+	$title-bar-height--3by3: 100%;
+
+	$title-bar-margin-bottom: 60px;
+
+	@include container($pagew-max-width);
+
+	position: relative;
+
+	margin-bottom: 60px;
+
+	&__image{
+		max-height: 600px;
+
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		overflow: hidden;	
+		
+		&:before{
+			content: '';
+			display: block;
+			width: 100%;
+
+			padding-bottom: $title-bar-height--6by1;
+		}
+
+		//different images for pages tittle-bars
+		&--home-page{
+			background-image: url('../img/title-bar__nuts.jpg');
+		}
+	}
+
+	&__content{
+		text-align: center;
+		margin-top: - line-height(2)/2;
+
+		background-color: rgba(255, 255, 255, .5);
+
+	}
+		&__heading{}
+
+		&__description{
+			color: get-color('accent');
+		}
+}
