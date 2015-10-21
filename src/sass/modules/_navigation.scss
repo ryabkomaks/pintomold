@@ -2,7 +2,7 @@
 	$navigation-top-margin: 30px;
 	$navigation-duble-border-space: 5px;
 
-	@include container($pagew-max-width);
+	@include container($page-max-width);
 	
 	position: relative;
 

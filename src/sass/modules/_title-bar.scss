@@ -6,7 +6,7 @@
 
 	$title-bar-margin-bottom: 60px;
 
-	@include container($pagew-max-width);
+	@include container($page-max-width);
 
 	position: relative;
 
