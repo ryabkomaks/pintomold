@@ -42,13 +42,17 @@
 		&__item{
 			font-size: type-scale(0);
 			line-height: line-height(-1);
-
-			display: inline-block;
+			text-decoration: none;
+			color: get-color('secondary');
 			
 			margin-left: 10px;
 
 			&:first-child{
 				margin-left: 0;
+			}
+
+			&:hover{
+				color: get-color('accent');	
 			}
 
 

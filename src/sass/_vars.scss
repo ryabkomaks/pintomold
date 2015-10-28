@@ -46,6 +46,19 @@ $line-height: (
 	2	: $base-line-height * 2
 );
 
+// Font icons
+$fi-css-prefix:		'fi-icon';
+
+$facebook-rect: 	'\e800';
+$attach: 			'\e801';
+$angle-double-up: 	'\e802';
+$angle-double-down: '\e804';
+$skype: 			'\e803';
+$menu: 				'\e805';
+$print: 			'\e806';
+$quote: 			'\e807';
+
+
 //Max container size
 $page-max-width: 70rem;
 

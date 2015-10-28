@@ -27,6 +27,14 @@
 		border-bottom: $scroll-top-anchor-height solid $scroll-top-anchor-bg;
 
 		cursor: pointer;
+
+		&:before{
+			content: $angle-double-up;
+			position: absolute;
+			
+			left: 50%;
+			margin-left: - type-scale(0)/2;
+		}
 	}
 
 	&__copyright{

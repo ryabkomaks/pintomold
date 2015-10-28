@@ -35,6 +35,32 @@ h4{
     @include type-setting(1);
 }
 
+// Fontello icons basic styles
+
+[class ^= #{$fi-css-prefix}]:before, 
+[class *= #{$fi-css-prefix}]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-smoothing: antialiased;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    text-transform: none;
+    speak: none;
+
+    display: inline-block;
+    width: type-scale(0);
+}
+
+.#{$fi-css-prefix}-facebook-rect:before{ content: $facebook-rect; }
+.#{$fi-css-prefix}-attach:before{ content: $attach; }
+.#{$fi-css-prefix}-angle-double-up:before{ content: $angle-double-up; }
+.#{$fi-css-prefix}-angle-double-down:before{ content: $angle-double-down; }
+.#{$fi-css-prefix}-skype:before{ content: $skype; }
+.#{$fi-css-prefix}-menu:before{ content: $menu; }
+.#{$fi-css-prefix}-print:before{ content: $print; }
+.#{$fi-css-prefix}-quote:before{ content: $quote; }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
